@@ -50,5 +50,8 @@ out/*
 build/*
 
 .idea*
+*.brackets.json
+*/.idea/*
+*.idea*
 
 mvn.log
