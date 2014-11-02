@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    title="prepopulated-multifield"
+    width="400"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configurations">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <multifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Names"
+                        name="./names"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="textfield"/>
+                    </multifield>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog) { &#xa;&#x9;var field = dialog.getField('./names'); &#xa;&#x9;if(field.getValue()){&#xa;&#x9;&#x9;var cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];&#xa;&#x9;&#x9;field.setValue(cars);&#xa;&#x9;};&#x9;&#xa;&#x9;return true;&#xa;}&#xa;"/>
+</jcr:root>
