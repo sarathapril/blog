@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:actions="[text:Configuration Bar,text:|,Edit,text:|,Delete]"
+    cq:dialogMode="floating"
+    cq:disableTargeting="{Boolean}true"
+    cq:inherit="{Boolean}true"
+    cq:layout="editbar"
+    jcr:primaryType="cq:EditConfig">
+    <cq:actionConfigs jcr:primaryType="nt:unstructured">
+        <seperator
+            jcr:primaryType="nt:unstructured"
+            xtype="tbseparator"/>
+        <customAction
+            jcr:primaryType="nt:unstructured"
+            handler="function(){ &#xa;&#x9;var editRollOver = CQ.utils.WCM.getEditable(this.path+&quot;/x&quot; );&#x9;&#xa;&#x9;CQ.wcm.EditBase.showDialog(editRollOver, CQ.wcm.EditBase.EDIT);&#xa;}"
+            text="My Action"/>
+    </cq:actionConfigs>
+</jcr:root>

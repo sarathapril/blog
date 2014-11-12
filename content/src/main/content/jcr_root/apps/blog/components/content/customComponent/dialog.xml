@@ -24,14 +24,9 @@
                     </multifield>
                 </items>
             </tab1>
-            <tab2
-                jcr:primaryType="cq:Panel"
-                title="Configurations">
-                <items jcr:primaryType="cq:WidgetCollection"/>
-            </tab2>
         </items>
     </items>
     <listeners
         jcr:primaryType="nt:unstructured"
-        loadcontent="function(dialog) { &#xa;&#x9;var field = dialog.getField('./names'); &#xa;&#x9;if(field.getValue()){&#xa;&#x9;&#x9;var cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];&#xa;&#x9;&#x9;field.setValue(cars);&#xa;&#x9;};&#x9;&#xa;&#x9;return true;&#xa;}&#xa;"/>
+        loadcontent="function(dialog) { &#xa;&#x9;var field = dialog.getField('./names'); &#xa;&#x9;if(field.getValue()){&#xa;&#x9;&#x9;var cars = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;];&#xa;&#x9;&#x9;field.setValue(cars);&#xa;&#x9;};&#x9;&#xa;&#x9;return true;&#xa;}&#xa;"/>
 </jcr:root>
