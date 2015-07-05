@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:description="This template uses clientLibInDetail component to show the different behaviour of client library proerties."
+    jcr:description="Template Restrictions"
     jcr:primaryType="cq:Template"
-    jcr:title="Client Lib in Detail Template"
-    ranking="{Long}100">
+    jcr:title="Template Restrictions"
+    allowedParents="[/apps/blog/templates/homepage]"
+    ranking="{Long}4">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="/apps/blog/components/page/clientLibInDetail"/>
+        sling:resourceType="/apps/blog/components/page/templateRes"/>
 </jcr:root>
