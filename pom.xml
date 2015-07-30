@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <!-- ====================================================================== -->
     <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
@@ -97,8 +98,12 @@
                 <version>1.0.2</version>
                 <scope>provided</scope>
             </dependency>
-
-
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.models.api</artifactId>
+                <version>1.0.0</version>
+                <scope>provided</scope>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
@@ -136,8 +141,17 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>2.5.3</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <instructions>
+                            <Sling-Model-Packages>
+                                sling.models
+                            </Sling-Model-Packages>
+                            <Bundle-Category>sling-model-demo</Bundle-Category>
+                        </instructions>
+                    </configuration>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -245,8 +259,8 @@
             </build>
         </profile>
     </profiles>
-  <modules>
-    <module>bundle</module>
-    <module>content</module>
-  </modules>
+    <modules>
+        <module>bundle</module>
+        <module>content</module>
+    </modules>
 </project>
