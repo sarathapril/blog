@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}400"
+    title="Social Profiles"
+    width="{Long}800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <panel
+                jcr:primaryType="cq:Panel"
+                title="Social Profiles">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <pages
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Click the '+' to add a new profile"
+                        fieldLabel="Profiles"
+                        name="./profiles"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="true"
+                            hideLabel="{Boolean}true"
+                            layout="form"
+                            padding="10px"
+                            width="1000"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <profileName
+                                    jcr:primaryType="cq:Widget"
+                                    dName="profileName"
+                                    fieldLabel="Profile Name"
+                                    xtype="textfield"/>
+                                <socialicon
+                                    jcr:primaryType="cq:Widget"
+                                    dName="icons"
+                                    fieldDescription="Click the '+' to add a multiple icon"
+                                    fieldLabel="Icons"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="cq:Widget"
+                                        options="/bin/sharing.icons.json"
+                                        optionsTextField="text"
+                                        optionsValueField="value"
+                                        type="select"
+                                        xtype="selection"/>
+                                </socialicon>
+                                <iconsize
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="none"
+                                    dName="iconsize"
+                                    fieldLabel="Icon Size"
+                                    type="select"
+                                    value="none"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <small
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Small"
+                                            value="small-icon"/>
+                                        <medium
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Medium"
+                                            value="med-icon"/>
+                                        <large
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Large"
+                                            value="large-icon"/>
+                                        <none
+                                            jcr:primaryType="nt:unstructured"
+                                            text="None"
+                                            value="none"/>
+                                    </options>
+                                </iconsize>
+                            </items>
+                        </fieldConfig>
+                    </pages>
+                </items>
+            </panel>
+        </items>
+    </items>
+</jcr:root>
