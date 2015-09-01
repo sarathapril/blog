@@ -1,4 +1,6 @@
 <%@include file="/apps/zapts/global/global.jsp"%>
+<cq:includeClientLib js="custom.multifield" />
+
 <%@page session="false" %>
 
 <h4>Social profiles component for creating different profiles.</h4> <br>

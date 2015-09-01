@@ -33,7 +33,7 @@
                                     dName="profileName"
                                     fieldLabel="Profile Name"
                                     xtype="textfield"/>
-                                <socialicon
+                               <!-- <socialicon
                                     jcr:primaryType="cq:Widget"
                                     dName="icons"
                                     fieldDescription="Click the '+' to add a multiple icon"
@@ -46,7 +46,7 @@
                                         optionsValueField="value"
                                         type="select"
                                         xtype="selection"/>
-                                </socialicon>
+                                </socialicon>-->
                                 <iconsize
                                     jcr:primaryType="cq:Widget"
                                     defaultValue="none"
