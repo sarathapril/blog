@@ -29,6 +29,7 @@ public class ResourceValues {
 
     /* Child List injection works after Sling version 1.0.6. According to the sling documentationa*/
 
+/*
     @Inject
     private List<Resource> childs;
 
@@ -40,6 +41,7 @@ public class ResourceValues {
     public void setChilds(List<Resource> childs) {
         this.childs = childs;
     }
+*/
 
     @PostConstruct
     protected void sayHello() {

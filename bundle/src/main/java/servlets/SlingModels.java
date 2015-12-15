@@ -29,7 +29,7 @@ public class SlingModels extends SlingAllMethodsServlet {
             resourceResolver = resourceResolverFactory.getAdministrativeResourceResolver(null);
             Resource resource = resourceResolver.getResource("/content/testsling/slingmodel");
             ValueMap valueMap = resource.adaptTo(ValueMap.class);
-            //out.print("Output from ValueMap is First Name: " + valueMap.get("firstName").toString() + " Last Name: " + valueMap.get("lastName").toString());
+            out.print("Output from ValueMap is First Name: " + valueMap.get("firstName").toString() + " Last Name: " + valueMap.get("lastName").toString());
             ResourceValues resourceValues = resource.adaptTo(ResourceValues.class);
             out.print("Output from Sling Model is First Name: " + resourceValues.getFirstName() + " Last Name: " + resourceValues.getLastName() + " Technology: " + resourceValues.getFullName());
 

@@ -1,0 +1,30 @@
+<h4> FEATURE NUMBER ONE - "Introduction of sly tag as a replacement of data-sly-unwrap" </h4>
+
+<sly data-sly-resource="${'parsys' @ resourceType='/libs/foundation/components/text'}"/>
+
+<h4> ======================================================= </h4>
+
+<h4> FEATURE NUMBER TWO - "Introduction of data-sly-repeat tag" </h4>
+
+<div data-sly-repeat="${ currentPage.listChildren }">
+    ${item.name}
+</div>
+
+<div data-sly-list="${ currentPage.listChildren }">
+    ${item.name}
+</div>
+<h4> ======================================================= </h4>
+
+
+<h4>FEATURE NUMBER THREE - "URL manipulation"</h4>
+
+${currentPage.path @ scheme='http', extension='html'}<br>
+${currentPage.path @ selectors='s1.s2', extension='html', fragment=currentPage.name}
+
+<h4> ======================================================= </h4>
+
+<h4> FEATURE NUMBER FOUR - "Introduction of locale attribute for i18n" </h4>
+
+${'Hello World' @ i18n, locale=request.locale}
+
+<h4> ======================================================= </h4>
